@@ -14,5 +14,3 @@ function isIsogram(str) {
 }
 
 console.log(isIsogram('tes'));
-
-
