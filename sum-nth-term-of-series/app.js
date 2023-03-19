@@ -15,14 +15,9 @@
 // 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
 
 function SeriesSum(n) {
-  if (n === 0) return 0.0;
-  let sum = 1;
-  let series = 4;
-  for (let i = 1; i < n; i++) {
-    sum += 1 / series;
-    series += 3;
-    console.log('hello');
-    console.log(sum);
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += 1 / (3  * i + 1);
   }
   return sum.toFixed(2);
 }
