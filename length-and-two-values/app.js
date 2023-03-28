@@ -8,8 +8,7 @@
 function alternate(n, firstValue, secondValue){
     const arr = []
     for (let i = 0; i < n; i++) {
-      arr.push(firstValue)
+      i % 2 === 0 ? arr.push(firstValue) : arr.push(secondValue)
     }
-
-    return arr.map((val, idx) => idx % 2 !== 0 ? secondValue: val)
+    return arr
   }
