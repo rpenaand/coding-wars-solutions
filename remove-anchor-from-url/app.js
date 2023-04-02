@@ -8,4 +8,5 @@ function removeUrlAnchor(url) {
   // remove everything after the #
   if (!url.includes('#')) return url;
   return url.slice(0, url.indexOf('#'));
+  return 
 }
