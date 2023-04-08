@@ -14,7 +14,6 @@ function divisors(integer) {
     }
   }
 
-  console.log(divisorsArr);
   return divisorsArr.length > 1 ? divisorsArr : 'prime';
 }
 
