@@ -17,4 +17,3 @@ function divisors(integer) {
   return divisorsArr.length > 1 ? divisorsArr : 'prime';
 }
 
-console.log(divisors(13));
