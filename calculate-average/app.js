@@ -4,7 +4,7 @@
 
 function findAverage(array) {
     //Check if array is empty return 0 if empty
-    if (array.length < 0) return 0;
+    if (array.length === 0) return 0;
   
     // loop through array and add values
     const sum =  array.reduce((acc, curVal) => (acc + curVal), 0) 
