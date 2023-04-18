@@ -9,18 +9,27 @@
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 
-function order(words){
-    //seperate each word
-    const strArr = words.split("")
-
-    //Get num in each world
-    
-
-    //compare num in each word
-
-    //sort based on num
-
-    ///return string in order
+function orderString(str) {
+  const orderedWords = [];
+  //Seperate string into sperate words
+  const words = str.split(' ');
+  //Loop through array of words to get each indivdual word
+  for (let i = 0; i < words.length; i++) {
+    const curWord = words[i];
+    //Loop through letters of each word to get number
+    for (let j = 0; j < curWord.length; j++) {
+      //Push to emty array based on number
+      if (!isNaN(+curWord.charAt(j))) {
+        orderedWords[+curWord.charAt(j) - 1] = curWord;
+      }
+    }
   }
 
-  order("the1 world3 good2") // -> the1 good2 world3
+  //Convert array of words back to a string
+  const orderedStr = orderedWords.join(' ');
+
+  //return new ordered sting
+  return orderedStr;
+}
+
+orderString('World2 Hello1'); //-> Hello1 World2
