@@ -32,4 +32,5 @@ function orderString(str) {
   return orderedStr;
 }
 
+
 orderString('World2 Hello1'); //-> Hello1 World2
