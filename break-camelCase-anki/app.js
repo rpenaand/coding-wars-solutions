@@ -7,18 +7,20 @@
 
 // complete the function
 function solution(string) {
-  let idx;
+  let newStr = '';
   //loop through the string
   for (let i = 0; i < string.length; i++) {
-    //Get Index of uppercase letter
-    if (string.charAt(i) === string.charAt(i).toUpperCase()) {
-      idx = i;
+    //Check if letter is uppercase if so add space
+    if (string[i] === string[i].toUpperCase()) {
+      newStr += ' ';
     }
+    newStr += string[i];
   }
-  //Split Word based on index
-  const words = string.split(string.charAt(idx));
-  return words.join(' ');
+
+  return newStr;
 }
 
-solution('camelCasing'); // -> camel Casing
-solution('helloWorld'); // -> hello World
+// solution('camelCasing');
+// solution('identifier');
+solution('camelCasing Test');
+solution('get ProblemEye');
