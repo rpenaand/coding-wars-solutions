@@ -27,5 +27,25 @@
 
 function alphabetWar(fight) {
   const leftside = 'sbpw';
+  let leftScore = 0;
   const rightside = 'zdqm';
+  let rightScore = 0;
+  for (let i = 0; i < fight.length; i++) {
+    if (leftside.includes(fight[i])) {
+      leftScore += leftside.indexOf(fight[i]) + 1;
+    } else if (rightside.includes(fight[i])) {
+      rightScore += rightside.indexOf(fight[i]) + 1;
+    }
+  }
+
+  console.log(leftScore, rightScore);
+  if (leftScore > rightScore) {
+    return 'Left side wins!';
+  } else if (leftScore < rightScore) {
+    return 'Right side wins!';
+  } else {
+    return `Let's fight again!`;
+  }
 }
+
+alphabetWar('z');
