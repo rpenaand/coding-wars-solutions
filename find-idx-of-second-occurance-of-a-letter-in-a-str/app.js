@@ -6,9 +6,6 @@
 // secondSymbol('Hello world!!!', 'A') --> -1
 
 function secondSymbol(s, symbol) {
-  const val = s
-    .split('')
-    .filter((val, idx) => (val === symbol ? idx : null))
-    .filter((val) => val);
-  return val.length !== 0 ? val[1] : -1;
+  const startingPos = s.indexOf(symbol);
+  return s.indexOf(symbol, startingPos + 1) || -1;
 }
