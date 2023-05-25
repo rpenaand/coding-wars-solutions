@@ -9,8 +9,10 @@
 // vowelOne( "aeiou, abc" ) // "1111100100"
 
 function vowelOne(s) {
-  const str = '';
-  for (let i = 0; i < s.length -1; i++) {
-    if (str[i] === "a" )
+  let str = '';
+  const vowels = 'aeiou';
+  for (let i = 0; i < s.length; i++) {
+    vowels.includes(s.toLowerCase()[i]) ? (str += '1') : (str += '0');
   }
+  return str;
 }
