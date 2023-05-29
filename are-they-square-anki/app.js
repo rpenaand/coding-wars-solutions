@@ -28,3 +28,5 @@ var isSquare = function (arr) {
   });
     return isSquare;
 };
+
+//look into arr.every()
