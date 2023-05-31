@@ -8,7 +8,6 @@
 // 'Testing {1}'.formatWith('kata') === 'Testing {1}' // there is no arguments at position 1
 
 String.prototype.formatWith = function (...args) {
-  // code me
   let str = this.toString();
   args.forEach((val, idx) => {
     while (str.includes(`{${idx}}`)) str = str.replace(`{${idx}}`, val);
