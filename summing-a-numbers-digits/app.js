@@ -8,11 +8,10 @@
 // Let's assume that all numbers in the input will be integer values.
 
 function sumDigits(number) {
-  const strNum = '' + number;
-  let sum = 0;
-  const numArr = strNum.split('').map((val) => Number(val));
-  for (let i = 0; i < numArr.length; i++) {
-    sum += numArr[i];
-  }
-  return sum;
+  const strNum = '' + Math.abs(number);
+  return strNum.split('').reduce((acc, cur) => (acc += +cur), 0);
 }
+
+console.log(sumDigits(10));
+console.log(sumDigits(99));
+console.log(sumDigits(-32));
