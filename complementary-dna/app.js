@@ -12,5 +12,21 @@
 // "GTAT" --> "CATA"
 
 function DNAStrand(dna) {
-  //your code here
+  return dna
+    .toUpperCase()
+    .split('')
+    .map((val) => {
+      if (val === 'A') {
+        return (val = 'T');
+      } else if (val === 'T') {
+        return (val = 'A');
+      } else if (val === 'C') {
+        return (val = 'G');
+      } else if (val === 'G') {
+        return (val = 'C');
+      }
+    })
+    .join('');
 }
+
+console.log(DNAStrand('ATTGC'));
