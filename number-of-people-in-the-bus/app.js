@@ -10,6 +10,11 @@
 
 // The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
-var number = function(busStops){
-
-  }
+var number = function (busStops) {
+  let numPeople = [];
+  busStops.forEach((val) => {
+    let sum = val[0] - val[1];
+    numPeople.push(sum);
+  });
+  return numPeople.reduce((acc, curVal) => (acc += curVal), 0);
+};
