@@ -15,5 +15,7 @@
 // '0' and '?' returns -1
 
 function sameCase(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string') return 0;
+  if (a === a.toUpperCase() && b === b.toUpperCase) return 1;
   return 0;
 }
