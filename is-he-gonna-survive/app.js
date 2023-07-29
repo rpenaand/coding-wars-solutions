@@ -3,6 +3,6 @@
 // Return true if yes, false otherwise :)
 
 function hero(bullets, dragons){
-    //Get Coding!
+    return bullets / 2 >= dragons ? true : false
     }
     

@@ -18,5 +18,5 @@
 // 0 <= y <= 4
 
 function points(games) {
-    return 0
-  }
+  return 0;
+}
