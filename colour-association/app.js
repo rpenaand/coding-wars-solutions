@@ -7,5 +7,11 @@
 // var array = [["white", "goodness"], ...] //returns [{white: 'goodness'}, ...]
 
 function colourAssociation(array){
-    // We <3 colours..
+    const newArr = []
+    array.forEach((item) => {
+      const newObj = {}
+      newObj[item[0]] = item[1]
+      newArr.push(newObj)
+    })
+    return newArr;
   }
